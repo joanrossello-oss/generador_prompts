@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  // En GitHub Pages la app vive en /<repositorio>/; en local, en la raíz.
+  base: process.env.VITE_BASE ?? "/",
   plugins: [
     react(),
     tailwindcss(),
