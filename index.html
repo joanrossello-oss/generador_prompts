@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f1115">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Prompts">
+  <title>Generador de Prompts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Generador de Prompts</h1>
+  </header>
+
+  <main class="layout">
+    <section class="panel" aria-labelledby="t-plantilla">
+      <h2 id="t-plantilla">1. Plantilla</h2>
+      <div id="categorias" class="chips" role="tablist"></div>
+      <label class="field">
+        <span>Tipo de prompt</span>
+        <select id="plantilla"></select>
+      </label>
+      <p id="descripcion" class="hint"></p>
+
+      <h2>2. Rellena los datos</h2>
+      <form id="formulario" autocomplete="off"></form>
+      <button type="button" id="limpiar" class="btn ghost">Limpiar campos</button>
+    </section>
+
+    <section class="panel" aria-labelledby="t-resultado">
+      <h2 id="t-resultado">3. Tu prompt</h2>
+      <textarea id="resultado" rows="16" placeholder="Aquí aparecerá tu prompt a medida que rellenes los campos…"></textarea>
+      <div class="actions">
+        <button type="button" id="copiar" class="btn primary">Copiar</button>
+        <button type="button" id="guardar" class="btn">Guardar</button>
+      </div>
+      <p id="estado" class="hint" aria-live="polite"></p>
+
+      <h2>Guardados</h2>
+      <ul id="guardados" class="saved"></ul>
+      <p id="sinGuardados" class="hint">Aún no has guardado ningún prompt.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
